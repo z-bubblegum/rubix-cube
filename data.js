@@ -8,10 +8,10 @@ var PLL_DATA = [
         "name": "Ua Perm",
         "algorithm": "R U R' U R' U' R2 U' R' U R' U R",
         "setup_algorithm": "R' U' R U' R U R2 U R U' R U' R'",
-        "diagram": { "top_edge": ["Back", "Back", "Back"], "right_edge": ["Right", "Front", "Right"], "bottom_edge": ["Front", "Left", "Front"], "left_edge": ["Left", "Right", "Left"] },
+        "diagram": { "top_edge": ["Front", "Left", "Front"], "right_edge": ["Right", "Front", "Right"], "bottom_edge": ["Back", "Back", "Back"], "left_edge": ["Left", "Right", "Left"] },
         "recognition": {
-          "pattern": "Solved 1x3 bar in the front. The edge on the right is NOT opposite to its corners. The edge on the left IS opposite to its corners.",
-          "holding_orientation": "Hold with the solved 1x3 bar in the front."
+          "pattern": "Solved 1x3 bar in the back. The edge on the right is NOT opposite to its corners. The edge on the left IS opposite to its corners.",
+          "holding_orientation": "Hold with the solved 1x3 bar in the back."
         },
         "moves_breakdown": [
           { "move": "R", "finger_trick": "Wrist turn upwards (Start in home grip)" },
@@ -33,10 +33,10 @@ var PLL_DATA = [
         "name": "Ub Perm",
         "algorithm": "R' U R' U' R' U' R' U R U R2",
         "setup_algorithm": "R2 U' R' U' R U R U R U' R",
-        "diagram": { "top_edge": ["Back", "Back", "Back"], "right_edge": ["Right", "Left", "Right"], "bottom_edge": ["Front", "Right", "Front"], "left_edge": ["Left", "Front", "Left"] },
+        "diagram": { "top_edge": ["Back", "Left", "Back"], "right_edge": ["Left", "Right", "Left"], "bottom_edge": ["Front", "Front", "Front"], "left_edge": ["Right", "Back", "Right"] },
         "recognition": {
-          "pattern": "Solved 1x3 bar in the front. The edge on the right IS opposite to its corners. The edge on the left is NOT opposite.",
-          "holding_orientation": "Hold with the solved 1x3 bar in the front."
+          "pattern": "Solved 1x3 bar in the back. The edge on the right IS opposite to its corners. The edge on the left is NOT opposite.",
+          "holding_orientation": "Hold with the solved 1x3 bar in the back."
         },
         "moves_breakdown": [
           { "move": "R'", "finger_trick": "Wrist turn downwards (Start with right thumb on top)" },
@@ -56,7 +56,7 @@ var PLL_DATA = [
         "name": "H Perm",
         "algorithm": "M2 U' M2 U2 M2 U' M2",
         "setup_algorithm": "M2 U M2 U2 M2 U M2",
-        "diagram": { "top_edge": ["Back", "Front", "Back"], "right_edge": ["Right", "Left", "Right"], "bottom_edge": ["Front", "Back", "Front"], "left_edge": ["Left", "Right", "Left"] },
+        "diagram": { "top_edge": ["Back", "Front", "Back"], "right_edge": ["Left", "Right", "Left"], "bottom_edge": ["Front", "Back", "Front"], "left_edge": ["Right", "Left", "Right"] },
         "recognition": {
           "pattern": "All edges are opposite in color to their adjacent corners.",
           "holding_orientation": "Can be executed from any angle."
@@ -75,10 +75,10 @@ var PLL_DATA = [
         "name": "Z Perm",
         "algorithm": "M' U' M2 U' M2 U' M' U2 M2",
         "setup_algorithm": "M2 U2 M U M2 U M2 U M",
-        "diagram": { "top_edge": ["Back", "Left", "Back"], "right_edge": ["Right", "Front", "Right"], "bottom_edge": ["Front", "Right", "Front"], "left_edge": ["Left", "Back", "Left"] },
+        "diagram": { "top_edge": ["Right", "Front", "Right"], "right_edge": ["Back", "Left", "Back"], "bottom_edge": ["Left", "Back", "Left"], "left_edge": ["Front", "Right", "Front"] },
         "recognition": {
           "pattern": "Checkerboard pattern on both sides of the cube. Adjacent edges need to swap with each other.",
-          "holding_orientation": "Hold the cube so that the back edge needs to swap with the right edge, and the left edge needs to swap with the front edge."
+          "holding_orientation": "Hold the cube so that the front edge needs to swap with the right edge, and the left edge needs to swap with the back edge."
         },
         "moves_breakdown": [
           { "move": "M'", "finger_trick": "Single flick upwards from bottom using right middle finger" },
@@ -101,10 +101,10 @@ var PLL_DATA = [
         "name": "Aa Perm",
         "algorithm": "x R' U R' D2 R U' R' D2 R2 x'",
         "setup_algorithm": "x R2 D2 R U R' D2 R U' R x'",
-        "diagram": { "top_edge": ["Right", "Back", "Left"], "right_edge": ["Back", "Right", "Right"], "bottom_edge": ["Front", "Front", "Back"], "left_edge": ["Front", "Left", "Left"] },
+        "diagram": { "top_edge": ["Left", "Back", "Left"], "right_edge": ["Right", "Left", "Front"], "bottom_edge": ["Front", "Front", "Back"], "left_edge": ["Back", "Right", "Right"] },
         "recognition": {
-          "pattern": "2x2 solved block on the back-left. Headlights in the front.",
-          "holding_orientation": "Hold with the 2x2 block on the back-left and headlights facing you."
+          "pattern": "2x2 solved block on the front-left. Headlights in the back.",
+          "holding_orientation": "Hold with the 2x2 block on the front-left and headlights facing away from you."
         },
         "moves_breakdown": [
           { "move": "x", "finger_trick": "Rotate entire cube away from you (regrip left hand)" },
@@ -124,10 +124,10 @@ var PLL_DATA = [
         "name": "Ab Perm",
         "algorithm": "x R2 D2 R U R' D2 R U' R x'",
         "setup_algorithm": "x R' U R' D2 R U' R' D2 R2 x'",
-        "diagram": { "top_edge": ["Back", "Back", "Front"], "right_edge": ["Right", "Right", "Back"], "bottom_edge": ["Left", "Front", "Front"], "left_edge": ["Left", "Left", "Right"] },
+        "diagram": { "top_edge": ["Right", "Back", "Front"], "right_edge": ["Back", "Left", "Back"], "bottom_edge": ["Front", "Front", "Left"], "left_edge": ["Left", "Right", "Right"] },
         "recognition": {
-          "pattern": "2x2 solved block on the back-right. Headlights on the right side.",
-          "holding_orientation": "Hold with the 2x2 block on the back-right."
+          "pattern": "2x2 solved block on the front-right. Headlights on the right side.",
+          "holding_orientation": "Hold with the 2x2 block on the front-right."
         },
         "moves_breakdown": [
           { "move": "x", "finger_trick": "Rotate entire cube away from you (regrip left hand)" },
@@ -147,7 +147,7 @@ var PLL_DATA = [
         "name": "E Perm",
         "algorithm": "x' R U' R' D R U R' D' R U R' D R U' R' D' x",
         "setup_algorithm": "x' D R U R' D' R U' R' D R U' R' D' R U R' x",
-        "diagram": { "top_edge": ["Front", "Back", "Front"], "right_edge": ["Back", "Right", "Back"], "bottom_edge": ["Back", "Front", "Back"], "left_edge": ["Front", "Left", "Front"] },
+        "diagram": { "top_edge": ["Left", "Back", "Right"], "right_edge": ["Back", "Left", "Front"], "bottom_edge": ["Right", "Front", "Left"], "left_edge": ["Front", "Right", "Back"] },
         "recognition": {
           "pattern": "No bars or headlights anywhere. Corners need to swap diagonally.",
           "holding_orientation": "Ensure the corner colors facing you on the right side match the edge color on the right face."
@@ -182,9 +182,9 @@ var PLL_DATA = [
         "name": "T Perm",
         "algorithm": "R U R' U' R' F R2 U' R' U' R U R' F'",
         "setup_algorithm": "F R U' R' U R U R2 F' R U R U' R'",
-        "diagram": { "top_edge": ["Back", "Back", "Front"], "right_edge": ["Right", "Left", "Right"], "bottom_edge": ["Back", "Front", "Front"], "left_edge": ["Left", "Right", "Left"] },
+        "diagram": { "top_edge": ["Left", "Back", "Back"], "right_edge": ["Back", "Right", "Front"], "bottom_edge": ["Front", "Front", "Left"], "left_edge": ["Right", "Left", "Right"] },
         "recognition": {
-          "pattern": "Headlights on the left side. Two 1x2 blocks on the back and front.",
+          "pattern": "Headlights on the left side. Two 1x2 blocks on the front and back.",
           "holding_orientation": "Hold with the headlights on the left."
         },
         "moves_breakdown": [
@@ -208,7 +208,7 @@ var PLL_DATA = [
         "name": "F Perm",
         "algorithm": "R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R",
         "setup_algorithm": "R' U' R U' R' U R U R2 F' R U R U' R' F U R",
-        "diagram": { "top_edge": ["Right", "Back", "Right"], "right_edge": ["Front", "Right", "Front"], "bottom_edge": ["Back", "Front", "Back"], "left_edge": ["Left", "Left", "Left"] },
+        "diagram": { "top_edge": ["Left", "Front", "Back"], "right_edge": ["Back", "Left", "Front"], "bottom_edge": ["Front", "Back", "Left"], "left_edge": ["Right", "Right", "Right"] },
         "recognition": {
           "pattern": "One solid 1x3 bar on one side. Very similar to T-perm internally.",
           "holding_orientation": "Hold with the solved 1x3 bar on the left side."
@@ -238,10 +238,10 @@ var PLL_DATA = [
         "name": "Jb Perm",
         "algorithm": "R U R' F' R U R' U' R' F R2 U' R'",
         "setup_algorithm": "R U R2 F' R U R U' R' F R U' R'",
-        "diagram": { "top_edge": ["Back", "Back", "Back"], "right_edge": ["Right", "Right", "Right"], "bottom_edge": ["Left", "Front", "Front"], "left_edge": ["Left", "Left", "Back"] },
+        "diagram": { "top_edge": ["Front", "Left", "Left"], "right_edge": ["Left", "Right", "Right"], "bottom_edge": ["Right", "Front", "Front"], "left_edge": ["Back", "Back", "Back"] },
         "recognition": {
-          "pattern": "A large 'J' shaped solved block on the front and right sides.",
-          "holding_orientation": "Hold with the solid 1x3 bar on the left and the other bar on the back."
+          "pattern": "A large 'J' shaped solved block on the back and right sides.",
+          "holding_orientation": "Hold with the solid 1x3 bar on the left and the other bar on the front."
         },
         "moves_breakdown": [
           { "move": "R", "finger_trick": "Wrist turn upwards (Start in pinch grip)" },
@@ -263,10 +263,10 @@ var PLL_DATA = [
         "name": "Ja Perm",
         "algorithm": "x R2 F R F' R U2 r' U r U2 x'",
         "setup_algorithm": "x U2 r' U' r U2 R' F R' F' R2 x'",
-        "diagram": { "top_edge": ["Back", "Back", "Back"], "right_edge": ["Front", "Right", "Right"], "bottom_edge": ["Front", "Front", "Right"], "left_edge": ["Left", "Left", "Left"] },
+        "diagram": { "top_edge": ["Left", "Left", "Back"], "right_edge": ["Back", "Back", "Front"], "bottom_edge": ["Front", "Front", "Left"], "left_edge": ["Right", "Right", "Right"] },
         "recognition": {
-          "pattern": "A large 'J' shaped solved block on the front and left sides.",
-          "holding_orientation": "Hold with the solid 1x3 bar on the left, headlights facing away."
+          "pattern": "A large 'J' shaped solved block on the back and left sides.",
+          "holding_orientation": "Hold with the solid 1x3 bar on the left, headlights facing you."
         },
         "moves_breakdown": [
           { "move": "x", "finger_trick": "Rotate cube away (regrip left hand)" },
@@ -287,10 +287,10 @@ var PLL_DATA = [
         "name": "Ra Perm",
         "algorithm": "R U' R' U' R U R D R' U' R D' R' U2 R'",
         "setup_algorithm": "R U2 R D R' U R D' R' U' R' U R U R'",
-        "diagram": { "top_edge": ["Back", "Right", "Front"], "right_edge": ["Right", "Right", "Back"], "bottom_edge": ["Left", "Front", "Front"], "left_edge": ["Left", "Back", "Left"] },
+        "diagram": { "top_edge": ["Front", "Back", "Left"], "right_edge": ["Left", "Front", "Right"], "bottom_edge": ["Right", "Right", "Front"], "left_edge": ["Back", "Left", "Back"] },
         "recognition": {
-          "pattern": "Headlights on the left. A 1x2 bar on the right side. No bar in the front.",
-          "holding_orientation": "Hold with headlights on the left and the 1x2 bar on the back-right."
+          "pattern": "Headlights on the left. A 1x2 bar on the right side. No bar in the back.",
+          "holding_orientation": "Hold with headlights on the left and the 1x2 bar on the front-right."
         },
         "moves_breakdown": [
           { "move": "R", "finger_trick": "Wrist turn upwards (Start in home grip)" },
@@ -314,10 +314,10 @@ var PLL_DATA = [
         "name": "Rb Perm",
         "algorithm": "R' U2 R U2 R' F R U R' U' R' F' R2",
         "setup_algorithm": "R2 F R U R U' R' F' R U2 R' U2 R",
-        "diagram": { "top_edge": ["Left", "Back", "Right"], "right_edge": ["Right", "Right", "Back"], "bottom_edge": ["Front", "Front", "Front"], "left_edge": ["Left", "Right", "Left"] },
+        "diagram": { "top_edge": ["Back", "Left", "Front"], "right_edge": ["Front", "Right", "Left"], "bottom_edge": ["Right", "Front", "Right"], "left_edge": ["Left", "Back", "Back"] },
         "recognition": {
           "pattern": "Headlights on the left. A 1x2 bar on the left side. Mirror of Ra.",
-          "holding_orientation": "Hold with the headlights facing away and the 1x2 bar on the right side."
+          "holding_orientation": "Hold with the headlights facing you and the 1x2 bar on the right side."
         },
         "moves_breakdown": [
           { "move": "R'", "finger_trick": "Wrist turn downwards (Start with thumb on top)" },
@@ -344,10 +344,10 @@ var PLL_DATA = [
         "name": "Y Perm",
         "algorithm": "F R U' R' U' R U R' F' R U R' U' R' F R F'",
         "setup_algorithm": "F R' F' R U R U' R' F R U' R' U R U R' F'",
-        "diagram": { "top_edge": ["Left", "Back", "Back"], "right_edge": ["Right", "Right", "Front"], "bottom_edge": ["Front", "Front", "Right"], "left_edge": ["Back", "Left", "Left"] },
+        "diagram": { "top_edge": ["Back", "Right", "Front"], "right_edge": ["Right", "Left", "Left"], "bottom_edge": ["Front", "Front", "Back"], "left_edge": ["Left", "Back", "Right"] },
         "recognition": {
           "pattern": "No headlights. Two 1x2 blocks that form a 'V' or 'Y' shape.",
-          "holding_orientation": "Hold with the 'V' shape blocks on the back-left and front-right."
+          "holding_orientation": "Hold with the 'V' shape blocks on the front-left and back-right."
         },
         "moves_breakdown": [
           { "move": "F", "finger_trick": "Right index finger pull down" },
@@ -373,7 +373,7 @@ var PLL_DATA = [
         "name": "Na Perm",
         "algorithm": "R U R' U R U R' F' R U R' U' R' F R2 U' R' U2 R U' R'",
         "setup_algorithm": "R U R' U2 R U R2 F' R U R U' R' F R U' R' U' R U' R'",
-        "diagram": { "top_edge": ["Front", "Back", "Front"], "right_edge": ["Right", "Right", "Right"], "bottom_edge": ["Back", "Front", "Back"], "left_edge": ["Left", "Left", "Left"] },
+        "diagram": { "top_edge": ["Front", "Back", "Back"], "right_edge": ["Left", "Right", "Right"], "bottom_edge": ["Back", "Front", "Front"], "left_edge": ["Right", "Left", "Left"] },
         "recognition": {
           "pattern": "Contains two 1x2 bars opposite each other. The longest PLL.",
           "holding_orientation": "Hold with the 1x2 bars on the left and right sides."
@@ -406,10 +406,10 @@ var PLL_DATA = [
         "name": "Nb Perm",
         "algorithm": "R' U R U' R' F' U' F R U R' F R' F' R U' R",
         "setup_algorithm": "R' U R' F R F' R U' R' F' U F R U R' U' R",
-        "diagram": { "top_edge": ["Back", "Back", "Back"], "right_edge": ["Left", "Right", "Left"], "bottom_edge": ["Front", "Front", "Front"], "left_edge": ["Right", "Left", "Right"] },
+        "diagram": { "top_edge": ["Back", "Back", "Front"], "right_edge": ["Right", "Right", "Left"], "bottom_edge": ["Front", "Front", "Back"], "left_edge": ["Left", "Left", "Right"] },
         "recognition": {
           "pattern": "Similar to Na but mirrored.",
-          "holding_orientation": "Hold with the 1x2 bars on the back-right and front-left."
+          "holding_orientation": "Hold with the 1x2 bars on the front-right and back-left."
         },
         "moves_breakdown": [
           { "move": "R'", "finger_trick": "Wrist turn downwards" },
@@ -435,10 +435,10 @@ var PLL_DATA = [
         "name": "V Perm",
         "algorithm": "R' U R' U' R D' R' D R' U D' R2 U' R2 D R2",
         "setup_algorithm": "R2 D' R2 U R2 D U' R D' R D R' U R U' R",
-        "diagram": { "top_edge": ["Front", "Back", "Left"], "right_edge": ["Right", "Right", "Back"], "bottom_edge": ["Right", "Front", "Front"], "left_edge": ["Back", "Left", "Left"] },
+        "diagram": { "top_edge": ["Back", "Left", "Front"], "right_edge": ["Right", "Back", "Left"], "bottom_edge": ["Front", "Front", "Back"], "left_edge": ["Left", "Right", "Right"] },
         "recognition": {
-          "pattern": "A 2x2 block solved on the back-right.",
-          "holding_orientation": "Hold with the 2x2 block on the back-right."
+          "pattern": "A 2x2 block solved on the front-right.",
+          "holding_orientation": "Hold with the 2x2 block on the front-right."
         },
         "moves_breakdown": [
           { "move": "R'", "finger_trick": "Wrist turn downwards" },
@@ -468,10 +468,10 @@ var PLL_DATA = [
         "name": "Ga Perm",
         "algorithm": "R2 U R' U R' U' R U' R2 D U' R' U R D'",
         "setup_algorithm": "D R' U' R U D' R2 U R' U R U' R U' R2",
-        "diagram": { "top_edge": ["Right", "Back", "Back"], "right_edge": ["Right", "Left", "Back"], "bottom_edge": ["Left", "Front", "Front"], "left_edge": ["Left", "Right", "Left"] },
+        "diagram": { "top_edge": ["Left", "Front", "Back"], "right_edge": ["Back", "Right", "Front"], "bottom_edge": ["Front", "Left", "Left"], "left_edge": ["Right", "Back", "Right"] },
         "recognition": {
-          "pattern": "Headlights on the left. A 1x2 bar on the back-right side.",
-          "holding_orientation": "Hold with headlights on the left and the 1x2 bar on the back face."
+          "pattern": "Headlights on the left. A 1x2 bar on the front-right side.",
+          "holding_orientation": "Hold with headlights on the left and the 1x2 bar on the front face."
         },
         "moves_breakdown": [
           { "move": "R2", "finger_trick": "Rolling motion towards you" },
@@ -495,10 +495,10 @@ var PLL_DATA = [
         "name": "Gb Perm",
         "algorithm": "D R' U' R U D' R2 U R' U R U' R U' R2",
         "setup_algorithm": "R2 U R' U R' U' R U' R2 D U' R' U R D'",
-        "diagram": { "top_edge": ["Back", "Back", "Right"], "right_edge": ["Back", "Right", "Left"], "bottom_edge": ["Right", "Front", "Front"], "left_edge": ["Left", "Right", "Left"] },
+        "diagram": { "top_edge": ["Left", "Right", "Back"], "right_edge": ["Back", "Front", "Front"], "bottom_edge": ["Front", "Back", "Left"], "left_edge": ["Right", "Left", "Right"] },
         "recognition": {
-          "pattern": "Headlights on the left. A 1x2 bar on the front-right side.",
-          "holding_orientation": "Hold with headlights on the left and the 1x2 bar on the front face."
+          "pattern": "Headlights on the left. A 1x2 bar on the back-right side.",
+          "holding_orientation": "Hold with headlights on the left and the 1x2 bar on the back face."
         },
         "moves_breakdown": [
           { "move": "D", "finger_trick": "Left ring finger push from back" },
@@ -522,9 +522,9 @@ var PLL_DATA = [
         "name": "Gc Perm",
         "algorithm": "D R2 U' R U' R U R' U R2 D' U R U' R'",
         "setup_algorithm": "R U R' U' D R2 U' R U' R' U R' U R2 D'",
-        "diagram": { "top_edge": ["Back", "Back", "Right"], "right_edge": ["Left", "Right", "Front"], "bottom_edge": ["Front", "Front", "Right"], "left_edge": ["Left", "Right", "Left"] },
+        "diagram": { "top_edge": ["Left", "Left", "Back"], "right_edge": ["Back", "Right", "Front"], "bottom_edge": ["Front", "Back", "Left"], "left_edge": ["Right", "Front", "Right"] },
         "recognition": {
-          "pattern": "Headlights on the left. A 1x2 bar on the back-left side.",
+          "pattern": "Headlights on the left. A 1x2 bar on the front-left side.",
           "holding_orientation": "Hold with headlights on the left and the 1x2 bar on the left face."
         },
         "moves_breakdown": [
@@ -549,10 +549,10 @@ var PLL_DATA = [
         "name": "Gd Perm",
         "algorithm": "R U R' U' D R2 U' R U' R' U R' U R2 D'",
         "setup_algorithm": "D R2 U' R U' R U R' U R2 D' U R U' R'",
-        "diagram": { "top_edge": ["Right", "Back", "Back"], "right_edge": ["Front", "Right", "Left"], "bottom_edge": ["Right", "Front", "Front"], "left_edge": ["Left", "Right", "Left"] },
+        "diagram": { "top_edge": ["Left", "Front", "Back"], "right_edge": ["Back", "Back", "Front"], "bottom_edge": ["Front", "Right", "Left"], "left_edge": ["Right", "Left", "Right"] },
         "recognition": {
-          "pattern": "Headlights on the left. A 1x2 bar on the front-left side.",
-          "holding_orientation": "Hold with headlights on the left and the 1x2 bar on the front face."
+          "pattern": "Headlights on the left. A 1x2 bar on the back-left side.",
+          "holding_orientation": "Hold with headlights on the left and the 1x2 bar on the back face."
         },
         "moves_breakdown": [
           { "move": "R", "finger_trick": "Wrist turn upwards" },

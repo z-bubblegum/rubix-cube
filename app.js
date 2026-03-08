@@ -170,11 +170,7 @@ function render2DDiagram(diagramData) {
     Right: "red",
   };
 
-  // Swap top/bottom edges to match x2 rotation (yellow-on-top flips front↔back)
-  const top_edge = diagramData.bottom_edge;
-  const right_edge = diagramData.right_edge;
-  const bottom_edge = diagramData.top_edge;
-  const left_edge = diagramData.left_edge;
+  const { top_edge, right_edge, bottom_edge, left_edge } = diagramData;
 
   // Build the 5x5 grid row by row
   const cells = [];
