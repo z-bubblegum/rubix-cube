@@ -505,6 +505,15 @@ select { font-family: var(--mono); }
   background: #ff6b6b;
 }
 
+.diagram-cell.oll-blank {
+  background: var(--bg-3);
+  border: 1px solid var(--bg-4);
+}
+
+.diagram-cell.oll-side {
+  background: #ffd43b;
+}
+
 /* =============================================
    Playback Controls
    ============================================= */
