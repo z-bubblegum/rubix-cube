@@ -80,6 +80,22 @@ select { font-family: var(--mono); }
   border-bottom: 1px solid var(--border);
 }
 
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-3);
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
 .logo {
   display: flex;
   align-items: center;
