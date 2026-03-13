@@ -13,6 +13,28 @@ let syncId = null;
 let moveCount = 0;
 let activeMoveIdx = -1;
 
+// ── Status Tracking ──────────────────────────
+const STATUS_CYCLE = ["none", "green", "yellow", "red"];
+
+function loadStatuses() {
+  try { return JSON.parse(localStorage.getItem("pll-status")) || {}; } catch { return {}; }
+}
+
+function saveStatuses(statuses) {
+  localStorage.setItem("pll-status", JSON.stringify(statuses));
+}
+
+function cycleStatus(name) {
+  const statuses = loadStatuses();
+  const current = statuses[name] || "none";
+  const idx = STATUS_CYCLE.indexOf(current);
+  const next = STATUS_CYCLE[(idx + 1) % STATUS_CYCLE.length];
+  if (next === "none") delete statuses[name];
+  else statuses[name] = next;
+  saveStatuses(statuses);
+  return next;
+}
+
 // ── DOM ────────────────────────────────────
 const $ = (s) => document.getElementById(s);
 const sidebar = $("sidebar");
@@ -29,15 +51,18 @@ function buildSidebar() {
     return;
   }
 
+  const statuses = loadStatuses();
   let html = "";
   PLL_DATA.forEach((group) => {
     html += `<div class="nav-group">`;
     html += `<div class="nav-group-title">${group.category}</div>`;
     group.cases.forEach((c) => {
       const badge = c.name.replace(" Perm", "");
+      const status = statuses[c.name] || "none";
       html += `<button class="nav-btn" data-name="${c.name}">
         <span class="nav-badge">${badge}</span>
-        <span>${c.name}</span>
+        <span class="nav-label">${c.name}</span>
+        <span class="nav-status" data-status="${status}"></span>
       </button>`;
     });
     html += `</div>`;
@@ -45,6 +70,16 @@ function buildSidebar() {
   sidebarNav.innerHTML = html;
 
   sidebarNav.addEventListener("click", (e) => {
+    // Handle status dot click
+    const dot = e.target.closest(".nav-status");
+    if (dot) {
+      e.stopPropagation();
+      const btn = dot.closest(".nav-btn");
+      const name = btn.dataset.name;
+      const next = cycleStatus(name);
+      dot.dataset.status = next;
+      return;
+    }
     const btn = e.target.closest(".nav-btn");
     if (!btn) return;
     loadCase(btn.dataset.name);
