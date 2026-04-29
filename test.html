@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cube Test</title>
+</head>
+<body style="background:#111;color:#fff;font-family:sans-serif;padding:40px;">
+  <h2>Cubing.js Bundle Test</h2>
+  <div id="box" style="width:300px;height:300px;border:1px solid #555;"></div>
+  <pre id="log" style="margin-top:20px;color:#aaa;font-size:13px;"></pre>
+
+  <script type="module">
+    const log = (msg) => {
+      document.getElementById('log').textContent += msg + '\n';
+      console.log(msg);
+    };
+
+    try {
+      log('Importing bundle...');
+      const mod = await import("./cubing-bundle.js");
+      const keys = Object.keys(mod);
+      log('Export count: ' + keys.length);
+      log('Has TwistyPlayer: ' + keys.includes('TwistyPlayer'));
+
+      const TwistyPlayer = mod.TwistyPlayer;
+      if (!TwistyPlayer) {
+        log('FATAL: TwistyPlayer not in exports');
+        log('Available: ' + keys.slice(0, 30).join(', '));
+      } else {
+        log('Creating player...');
+        const player = new TwistyPlayer({
+          puzzle: "3x3x3",
+          alg: "R U R' U'",
+          visualization: "3D",
+          controlPanel: "bottom",
+          background: "none",
+        });
+        player.style.width = "300px";
+        player.style.height = "300px";
+        player.style.display = "block";
+        document.getElementById('box').appendChild(player);
+        log('Player appended');
+
+        setTimeout(() => {
+          log('Player size: ' + player.offsetWidth + 'x' + player.offsetHeight);
+          const sr = player.shadowRoot;
+          log('Shadow root exists: ' + !!sr);
+          if (sr) {
+            const canvas = sr.querySelector('canvas');
+            log('Canvas in shadow DOM: ' + !!canvas);
+            if (canvas) {
+              log('Canvas dimensions: ' + canvas.width + 'x' + canvas.height);
+              log('Canvas display: ' + getComputedStyle(canvas).display);
+            }
+            log('Shadow child count: ' + sr.childNodes.length);
+          }
+        }, 3000);
+      }
+    } catch(e) {
+      log('ERROR: ' + e.message);
+      log(e.stack);
+    }
+  </script>
+</body>
+</html>
